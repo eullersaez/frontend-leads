@@ -1,4 +1,5 @@
 import { Button, Card, CardContent, Typography } from "@mui/material";
+import "../css/LeadCard.css";
 
 const LeadCard = ({ lead, onAccept, onDecline, isInvited = true }) => {
   const date = new Date(lead.createdAt);
@@ -33,14 +34,7 @@ const LeadCard = ({ lead, onAccept, onDecline, isInvited = true }) => {
         <Typography>${lead.price.toFixed(2)}</Typography>
 
         {isInvited && (
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              gap: "8px",
-              marginTop: "10px",
-            }}
-          >
+          <div className="buttons">
             <Button color="success" onClick={() => onAccept(lead.id)}>
               Accept
             </Button>

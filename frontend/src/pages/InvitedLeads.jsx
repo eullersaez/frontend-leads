@@ -24,14 +24,7 @@ const InvitedLeads = () => {
   };
 
   return (
-    <div
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "stretch",
-        flexGrow: 1,
-      }}
-    >
+    <div className="invitedLeads">
       {leads.map((lead) => (
         <LeadCard
           key={lead.id}
